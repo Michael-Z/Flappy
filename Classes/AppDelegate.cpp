@@ -1,5 +1,7 @@
+#include "Config.h"
 #include "AppDelegate.h"
 #include "SoushenScene.h"
+#include "Game/GameManager.h"
 
 USING_NS_CC;
 
@@ -29,6 +31,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // run
     pDirector->runWithScene(pScene);
+
+	View::_gamemanager::instance()->DisplayNowScene(View::SCENE_INIT);
 
     return true;
 }

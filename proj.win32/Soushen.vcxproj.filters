@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win32">
+      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Worker">
+      <UniqueIdentifier>{5ff81b2b-db54-4548-ada6-308918a0c983}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\View">
+      <UniqueIdentifier>{f75ca3f8-f5b8-4273-9d27-277829f5cdc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Utils">
+      <UniqueIdentifier>{42538d9a-6d2e-4373-a970-692380883f4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\TcpNetwork">
+      <UniqueIdentifier>{4d4d1d10-fef8-4f4e-bcca-2e3ae19f931f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Packet">
+      <UniqueIdentifier>{670e95a7-94c5-4cb5-b6bd-4d26f0d8a347}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Game">
+      <UniqueIdentifier>{552a4839-9e96-4600-b707-632aaad3701d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Common">
+      <UniqueIdentifier>{ff9e63bf-4ccf-4d90-8ee5-7d82183515c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Packet\Handler">
+      <UniqueIdentifier>{52eeaaa7-0873-4004-88f6-5cd5fa172a2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\View\Button">
+      <UniqueIdentifier>{770dd28b-318a-4ef5-abc5-b8c01a81d872}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\View\Layer">
+      <UniqueIdentifier>{c18766e6-6c0e-40e5-ab80-28bd1a7cefc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\View\Scene">
+      <UniqueIdentifier>{545983a4-0287-48bc-8ae0-c2673a70a183}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\View\Sprite">
+      <UniqueIdentifier>{c5be9d9a-1c1f-4eee-ab48-5edea2737f6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\System">
+      <UniqueIdentifier>{ca544bab-df30-4cc9-8403-3d5bb47040ef}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SouShenScene.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\GameManager.cpp">
+      <Filter>Classes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\LeftTPlayer.cpp">
+      <Filter>Classes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\RightTPlayer.cpp">
+      <Filter>Classes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\SelfTPlayer.cpp">
+      <Filter>Classes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\TopTPlayer.cpp">
+      <Filter>Classes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game\Tplayer.cpp">
+      <Filter>Classes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Common\PlayCard.cpp">
+      <Filter>Classes\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Packet\AllHandlers.cpp">
+      <Filter>Classes\Packet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Packet\Builder.cpp">
+      <Filter>Classes\Packet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Packet\Packet.cpp">
+      <Filter>Classes\Packet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Packet\Processor.cpp">
+      <Filter>Classes\Packet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Packet\Handler\Handler.cpp">
+      <Filter>Classes\Packet\Handler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Utils\CharacterConver.cpp">
+      <Filter>Classes\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Utils\Singleton.cpp">
+      <Filter>Classes\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\View\Button\Button.cpp">
+      <Filter>Classes\View\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\View\Layer\ControllerLayer.cpp">
+      <Filter>Classes\View\Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\View\Layer\GameLayer.cpp">
+      <Filter>Classes\View\Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\View\Sprite\CardBase.cpp">
+      <Filter>Classes\View\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\View\Sprite\CardGeneral.cpp">
+      <Filter>Classes\View\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\View\Sprite\CardKing.cpp">
+      <Filter>Classes\View\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\View\Sprite\CardNormal.cpp">
+      <Filter>Classes\View\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\View\Scene\CBaseScene.cpp">
+      <Filter>Classes\View\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\View\Scene\CMenuScene.cpp">
+      <Filter>Classes\View\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\View\Scene\CTestScene.cpp">
+      <Filter>Classes\View\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\View\Scene\PlayScence.cpp">
+      <Filter>Classes\View\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Clock.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\CsvParser.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\DigestEngine.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\DirectoryIterator.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Err.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Event.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\File.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\IniFile.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Lock.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Logger.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Mutex.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\NumberConv.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Path.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Platform.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Random.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Serialize.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\SHA1Engine.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Sleep.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\String.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\StringTokenizer.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Thread.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\ThreadLocal.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Timer.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\TimeUtil.cpp">
+      <Filter>Classes\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TcpNetwork\ClientNet.cpp">
+      <Filter>Classes\TcpNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TcpNetwork\Socket.cpp">
+      <Filter>Classes\TcpNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TcpNetwork\TcpClient.cpp">
+      <Filter>Classes\TcpNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TcpNetwork\TcpSocket.cpp">
+      <Filter>Classes\TcpNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TcpNetwork\Utils.cpp">
+      <Filter>Classes\TcpNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Config.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SoushenScene.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\GameManager.h">
+      <Filter>Classes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game\Tplayer.h">
+      <Filter>Classes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Common\CCard.h">
+      <Filter>Classes\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Common\PlayCard.h">
+      <Filter>Classes\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Common\Rule.h">
+      <Filter>Classes\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Packet\Builder.h">
+      <Filter>Classes\Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Packet\Processor.h">
+      <Filter>Classes\Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Packet\Handler\Handler.h">
+      <Filter>Classes\Packet\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Packet\Handler\UserLogin.h">
+      <Filter>Classes\Packet\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Utils\CharacterConver.h">
+      <Filter>Classes\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Utils\MobileLog.h">
+      <Filter>Classes\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Utils\Singleton.h">
+      <Filter>Classes\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\View\GameResources.h">
+      <Filter>Classes\View</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\View\PixelResolution.h">
+      <Filter>Classes\View</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\View\Button\Button.h">
+      <Filter>Classes\View\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\View\Layer\ControllerLayer.h">
+      <Filter>Classes\View\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\View\Layer\GameLayer.h">
+      <Filter>Classes\View\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\View\Sprite\CardBase.h">
+      <Filter>Classes\View\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\View\Sprite\CardGeneral.h">
+      <Filter>Classes\View\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\View\Sprite\CardKing.h">
+      <Filter>Classes\View\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\View\Sprite\CardNormal.h">
+      <Filter>Classes\View\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\View\Sprite\CCardSprite.h">
+      <Filter>Classes\View\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\View\Scene\CBaseScene.h">
+      <Filter>Classes\View\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\View\Scene\CMenuScene.h">
+      <Filter>Classes\View\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\View\Scene\CTestScene.h">
+      <Filter>Classes\View\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\View\Scene\PlayScence.h">
+      <Filter>Classes\View\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\Any.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\Clock.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\CsvParser.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\DigestEngine.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\DirectoryIterator.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\Err.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\Event.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\File.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\IniFile.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\Lock.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\Logger.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\MsgQueue.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\Mutex.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\NonCopyable.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\NumberConv.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\Path.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\Platform.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\Random.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\Resource.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\Serialize.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\SHA1Engine.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\Sleep.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\String.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\StringFormatter.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\StringTokenizer.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\System.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\Thread.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\ThreadLocal.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\ThreadLocalPtr.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\Timer.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\TimeUtil.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\UniqueID.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\Utf.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\Vector2.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\System\Vector3.h">
+      <Filter>Classes\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TcpNetwork\ClientNet.h">
+      <Filter>Classes\TcpNetwork</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TcpNetwork\Socket.h">
+      <Filter>Classes\TcpNetwork</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TcpNetwork\TcpClient.h">
+      <Filter>Classes\TcpNetwork</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TcpNetwork\TcpSocket.h">
+      <Filter>Classes\TcpNetwork</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TcpNetwork\Utils.h">
+      <Filter>Classes\TcpNetwork</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Config.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Classes\Packet\Builder.inl">
+      <Filter>Classes\Packet</Filter>
+    </None>
+    <None Include="..\Classes\Packet\Handler\Handlers.inl">
+      <Filter>Classes\Packet\Handler</Filter>
+    </None>
+    <None Include="..\Classes\System\premake4.lua">
+      <Filter>Classes\System</Filter>
+    </None>
+    <None Include="..\Classes\System\Resource.inl">
+      <Filter>Classes\System</Filter>
+    </None>
+    <None Include="..\Classes\System\ResourcePtr.inl">
+      <Filter>Classes\System</Filter>
+    </None>
+    <None Include="..\Classes\System\Thread.inl">
+      <Filter>Classes\System</Filter>
+    </None>
+    <None Include="..\Classes\System\ThreadLocalPtr.inl">
+      <Filter>Classes\System</Filter>
+    </None>
+    <None Include="..\Classes\System\Utf.inl">
+      <Filter>Classes\System</Filter>
+    </None>
+    <None Include="..\Classes\System\Vector2.inl">
+      <Filter>Classes\System</Filter>
+    </None>
+    <None Include="..\Classes\System\Vector3.inl">
+      <Filter>Classes\System</Filter>
+    </None>
+  </ItemGroup>
+</Project>
