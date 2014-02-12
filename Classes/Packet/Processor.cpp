@@ -1,7 +1,7 @@
 #include "Config.h"
 #include "Processor.h"
 #include "Packet/Handler/Handler.h"
-#include "../TcpNetwork/ClientNet.h"
+#include "../TcpNetwork/TcpNet.h"
 
 namespace Packet
 {
@@ -42,16 +42,16 @@ bool Processor::parseInit(UInt8 *evbuf, int len, UInt32 data, UInt32 addr)
 	HandlerMsgInit * msg = (HandlerMsgInit *)malloc(sz + sizeof(HandlerMsgInit));
 	if(msg == NULL)
 	{
-		TcpNetWork::_clientnet.drainDataBuf(sz + 6);
+	//	TcpNetWork::_TcpNet.drainDataBuf(sz + 6);
 		return true;
 	}
 	msg->hdr.size = sz;
 	msg->sessionId = data;
 	msg->fromGateway = 0xFFFFFFFF;
 	msg->remoteAddr = addr;
-	TcpNetWork::_clientnet.drainDataBuf(6);	
+	//TcpNetWork::_TcpNet.drainDataBuf(6);	
 	UInt8 *buf = ((UInt8*)msg) + sizeof(HandlerMsgInit);
-	TcpNetWork::_clientnet.copyDataBuf(buf, sz);
+	//TcpNetWork::_TcpNet.copyDataBuf(buf, sz);
 	UInt16 op = hdr.op;
 	decryptPacket(key, op, sz, buf);
 	Handler * hdl = _initHandlers[op];

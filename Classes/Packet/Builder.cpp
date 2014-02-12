@@ -1,6 +1,6 @@
 #include "Config.h"
 #include "Builder.h"
-#include "../TcpNetwork/ClientNet.h"
+#include "../TcpNetwork/TcpNet.h"
 
 namespace Packet
 {
@@ -8,7 +8,7 @@ void Builder::send()
 {
 	if (stream.get() != NULL || pack())
 	{
-		TcpNetWork::_clientnet.sendMsg(&(*stream)[0], static_cast<int>(stream->size()));
+		//TcpNetWork::_TcpNet.sendMsg(&(*stream)[0], static_cast<int>(stream->size()));
 	}
 }
 

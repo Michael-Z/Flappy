@@ -204,9 +204,6 @@
     <ClCompile Include="..\Classes\System\TimeUtil.cpp">
       <Filter>Classes\System</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\TcpNetwork\ClientNet.cpp">
-      <Filter>Classes\TcpNetwork</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\TcpNetwork\Socket.cpp">
       <Filter>Classes\TcpNetwork</Filter>
     </ClCompile>
@@ -221,6 +218,15 @@
     </ClCompile>
     <ClCompile Include="..\Classes\Config.cpp">
       <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Worker\Base.cpp">
+      <Filter>Classes\Worker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Worker\Tcp.cpp">
+      <Filter>Classes\Worker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TcpNetwork\TcpNet.cpp">
+      <Filter>Classes\TcpNetwork</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -416,9 +422,6 @@
     <ClInclude Include="..\Classes\System\Vector3.h">
       <Filter>Classes\System</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\TcpNetwork\ClientNet.h">
-      <Filter>Classes\TcpNetwork</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\TcpNetwork\Socket.h">
       <Filter>Classes\TcpNetwork</Filter>
     </ClInclude>
@@ -433,6 +436,15 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Config.h">
       <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Worker\Base.h">
+      <Filter>Classes\Worker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Worker\Tcp.h">
+      <Filter>Classes\Worker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TcpNetwork\TcpNet.h">
+      <Filter>Classes\TcpNetwork</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

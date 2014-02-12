@@ -2,6 +2,7 @@
 #include "AppDelegate.h"
 #include "SoushenScene.h"
 #include "Game/GameManager.h"
+#include "TcpNetwork/TcpNet.h"
 
 USING_NS_CC;
 
@@ -30,9 +31,12 @@ bool AppDelegate::applicationDidFinishLaunching() {
     CCScene *pScene = HelloWorld::scene();
 
     // run
-    pDirector->runWithScene(pScene);
+    //pDirector->runWithScene(pScene);
 
 	View::_gamemanager::instance()->DisplayNowScene(View::SCENE_INIT);
+
+	//connect 
+	//TcpNetWork::_TcpNet.connect("127.0.0.1", 7770, 50);
 
     return true;
 }

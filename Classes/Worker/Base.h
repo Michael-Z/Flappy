@@ -11,8 +11,6 @@ struct event;
 namespace Worker
 {
 
-struct WorkerTimerData;
-
 class SimpleBase
 {
 public:
@@ -44,30 +42,30 @@ protected:
 	System::Random * _random;
 };
 
-class Base: public SimpleBase
-{
-public:
-	Base();
-	virtual ~Base();
-
-	bool addTimer(int, UInt32, UInt32 = 0, void * = NULL);
-	bool delTimer(int);
-
-protected:
-	virtual bool init() { return true; }
-	virtual void uninit() {}
-	virtual void loop();
-	virtual void onTimer(int, void *) {}
-
-protected:
-	struct event_base * _evBase;
-
-private:
-	static void _onTimer(socket_t, short, void *);
-
-private:
-	std::unordered_map<int, WorkerTimerData *> _timers;
-};
+//class Base: public SimpleBase
+//{
+//public:
+//	Base();
+//	virtual ~Base();
+//
+//	bool addTimer(int, UInt32, UInt32 = 0, void * = NULL);
+//	bool delTimer(int);
+//
+//protected:
+//	virtual bool init() { return true; }
+//	virtual void uninit() {}
+//	virtual void loop();
+//	virtual void onTimer(int, void *) {}
+//
+//protected:
+//	struct event_base * _evBase;
+//
+//private:
+//	static void _onTimer(socket_t, short, void *);
+//
+//private:
+//	std::unordered_map<int, WorkerTimerData *> _timers;
+//};
 
 #define Rand ::Worker::SimpleBase::getRandom
 #define RandF ::Worker::SimpleBase::getRandomF

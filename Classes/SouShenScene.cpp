@@ -1,3 +1,4 @@
+#include "Config.h"
 #include "SoushenScene.h"
 
 USING_NS_CC;

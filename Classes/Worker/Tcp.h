@@ -2,48 +2,29 @@
 #define _WORKER_TCP_H_
 
 #include "Base.h"
-
-// namespace Object
-// {
-// 	class Player;
-// }
-
- namespace Network
- {
- 	class TcpClient;
- 	class TcpEventHandler;
- }
-
+#include "Classes/TcpNetwork/TcpNet.h"
 namespace Worker
 {
+ class Tcp: public SimpleBase
+ {
+ public:
+	 Tcp();
+	 virtual ~Tcp();
 
-class Tcp: public Base
-{
-public:
-	Tcp(){}//:_client(NULL) {}
-	void stop();
-	void close(UInt32, UInt32);
-	void pendClose(UInt32);
-	void send(UInt32, UInt32, std::shared_ptr<std::string>&);
-	//void sendMulti(void *, std::shared_ptr<std::string>&);
-	void sendNolock(UInt32, UInt32, std::shared_ptr<std::string>&);
-	void sendLock();
-	void sendUnlock();
-//	void broadcast(std::shared_ptr<std::string>&);
-//	void setPlayer(UInt32, Object::Player *);
-	void setFromGateway(UInt32);
-
-protected:
-	virtual bool init();
-	virtual void uninit();
-	virtual const char * getLogFilename() { return "tcp"; }
-	virtual void onTimer(int, void *);
-
-private:
-	bool _running;
-	Network::TcpClient *_client;
-};
-
+	 bool addTimer(int, UInt32, UInt32 = 0, void * = NULL);
+	 bool delTimer(int);
+	 inline void initTcpInfo(const char *str, UInt16 port) { _serverIp = str; _serverPort = port; }
+ protected:
+	 virtual bool init();
+	 virtual void uninit();
+	 virtual void loop();
+	 virtual void onTimer(int, void *) {}
+ private:
+	 bool _running;
+	 std::string _serverIp;
+	 UInt16 _serverPort;
+	 TcpNetWork::TcpNet *_tcpnet;
+ };
 extern Tcp tcp;
 
 }

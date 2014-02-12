@@ -149,31 +149,79 @@ xcopy /Y /Q "$(ProjectDir)..\..\..\external\libwebsockets\win32\lib\*.*" "$(OutD
     <ClCompile Include="..\Classes\Packet\Packet.cpp" />
     <ClCompile Include="..\Classes\Packet\Processor.cpp" />
     <ClCompile Include="..\Classes\SouShenScene.cpp" />
-    <ClCompile Include="..\Classes\System\Clock.cpp" />
-    <ClCompile Include="..\Classes\System\CsvParser.cpp" />
-    <ClCompile Include="..\Classes\System\DigestEngine.cpp" />
-    <ClCompile Include="..\Classes\System\DirectoryIterator.cpp" />
-    <ClCompile Include="..\Classes\System\Err.cpp" />
-    <ClCompile Include="..\Classes\System\Event.cpp" />
-    <ClCompile Include="..\Classes\System\File.cpp" />
-    <ClCompile Include="..\Classes\System\IniFile.cpp" />
-    <ClCompile Include="..\Classes\System\Lock.cpp" />
-    <ClCompile Include="..\Classes\System\Logger.cpp" />
-    <ClCompile Include="..\Classes\System\Mutex.cpp" />
-    <ClCompile Include="..\Classes\System\NumberConv.cpp" />
-    <ClCompile Include="..\Classes\System\Path.cpp" />
-    <ClCompile Include="..\Classes\System\Platform.cpp" />
-    <ClCompile Include="..\Classes\System\Random.cpp" />
-    <ClCompile Include="..\Classes\System\Serialize.cpp" />
-    <ClCompile Include="..\Classes\System\SHA1Engine.cpp" />
-    <ClCompile Include="..\Classes\System\Sleep.cpp" />
-    <ClCompile Include="..\Classes\System\String.cpp" />
-    <ClCompile Include="..\Classes\System\StringTokenizer.cpp" />
-    <ClCompile Include="..\Classes\System\Thread.cpp" />
-    <ClCompile Include="..\Classes\System\ThreadLocal.cpp" />
-    <ClCompile Include="..\Classes\System\Timer.cpp" />
-    <ClCompile Include="..\Classes\System\TimeUtil.cpp" />
-    <ClCompile Include="..\Classes\TcpNetwork\ClientNet.cpp" />
+    <ClCompile Include="..\Classes\System\Clock.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\CsvParser.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\DigestEngine.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\DirectoryIterator.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Err.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Event.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\File.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\IniFile.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Lock.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Logger.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Mutex.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\NumberConv.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Path.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Platform.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Random.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Serialize.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\SHA1Engine.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Sleep.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\String.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\StringTokenizer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Thread.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\ThreadLocal.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\Timer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\System\TimeUtil.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TcpNetwork\TcpNet.cpp" />
     <ClCompile Include="..\Classes\TcpNetwork\Socket.cpp" />
     <ClCompile Include="..\Classes\TcpNetwork\TcpClient.cpp" />
     <ClCompile Include="..\Classes\TcpNetwork\TcpSocket.cpp" />
@@ -191,6 +239,8 @@ xcopy /Y /Q "$(ProjectDir)..\..\..\external\libwebsockets\win32\lib\*.*" "$(OutD
     <ClCompile Include="..\Classes\View\Sprite\CardGeneral.cpp" />
     <ClCompile Include="..\Classes\View\Sprite\CardKing.cpp" />
     <ClCompile Include="..\Classes\View\Sprite\CardNormal.cpp" />
+    <ClCompile Include="..\Classes\Worker\Base.cpp" />
+    <ClCompile Include="..\Classes\Worker\Tcp.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -241,7 +291,7 @@ xcopy /Y /Q "$(ProjectDir)..\..\..\external\libwebsockets\win32\lib\*.*" "$(OutD
     <ClInclude Include="..\Classes\System\Utf.h" />
     <ClInclude Include="..\Classes\System\Vector2.h" />
     <ClInclude Include="..\Classes\System\Vector3.h" />
-    <ClInclude Include="..\Classes\TcpNetwork\ClientNet.h" />
+    <ClInclude Include="..\Classes\TcpNetwork\TcpNet.h" />
     <ClInclude Include="..\Classes\TcpNetwork\Socket.h" />
     <ClInclude Include="..\Classes\TcpNetwork\TcpClient.h" />
     <ClInclude Include="..\Classes\TcpNetwork\TcpSocket.h" />
@@ -263,6 +313,8 @@ xcopy /Y /Q "$(ProjectDir)..\..\..\external\libwebsockets\win32\lib\*.*" "$(OutD
     <ClInclude Include="..\Classes\View\Sprite\CardKing.h" />
     <ClInclude Include="..\Classes\View\Sprite\CardNormal.h" />
     <ClInclude Include="..\Classes\View\Sprite\CCardSprite.h" />
+    <ClInclude Include="..\Classes\Worker\Base.h" />
+    <ClInclude Include="..\Classes\Worker\Tcp.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>
