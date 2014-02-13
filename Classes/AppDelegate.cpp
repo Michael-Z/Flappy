@@ -3,6 +3,10 @@
 #include "SoushenScene.h"
 #include "Game/GameManager.h"
 #include "TcpNetwork/TcpNet.h"
+#include "Worker/Tcp.h"
+#include "SsCfg.h"
+#include "../Packet/Builder.h"
+#include "System/Sleep.h"
 
 USING_NS_CC;
 
@@ -37,6 +41,16 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
 	//connect 
 	//TcpNetWork::_TcpNet.connect("127.0.0.1", 7770, 50);
+
+	sSCfg.load();
+
+	Worker::_tcp.initTcpInfo(sSCfg.tcpHost.c_str(), sSCfg.tcpPort);
+	Worker::_tcp.start();
+	
+	System::Sleep(5000);
+	Packet::LogIn ul;
+	ul.SetUsername("test1@pope");
+	ul.send();
 
     return true;
 }

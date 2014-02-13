@@ -2,6 +2,7 @@
 #define _BUILDER_H_
 #include "PacketsCtoS.h"
 
+
 namespace Packet
 {
 	using namespace game::net::data::CtoS;
@@ -31,7 +32,7 @@ namespace Packet
 		BuilderT<T, OP>():Builder(OP){}
 		virtual void packContent()
 		{
-			T::pack(*stream.get());
+			T::Pack(*stream.get());
 		}
 	};
 

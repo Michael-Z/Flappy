@@ -228,6 +228,9 @@
     <ClCompile Include="..\Classes\TcpNetwork\TcpNet.cpp">
       <Filter>Classes\TcpNetwork</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\SsCfg.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -445,6 +448,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\TcpNetwork\TcpNet.h">
       <Filter>Classes\TcpNetwork</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SsCfg.h">
+      <Filter>Classes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

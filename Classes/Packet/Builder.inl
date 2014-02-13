@@ -1,1 +1,1 @@
-DefBuilder(UserLogin, 0x1);
+DefBuilder(LogIn, 0x01);

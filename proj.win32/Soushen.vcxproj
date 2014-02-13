@@ -149,6 +149,7 @@ xcopy /Y /Q "$(ProjectDir)..\..\..\external\libwebsockets\win32\lib\*.*" "$(OutD
     <ClCompile Include="..\Classes\Packet\Packet.cpp" />
     <ClCompile Include="..\Classes\Packet\Processor.cpp" />
     <ClCompile Include="..\Classes\SouShenScene.cpp" />
+    <ClCompile Include="..\Classes\SsCfg.cpp" />
     <ClCompile Include="..\Classes\System\Clock.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -256,6 +257,7 @@ xcopy /Y /Q "$(ProjectDir)..\..\..\external\libwebsockets\win32\lib\*.*" "$(OutD
     <ClInclude Include="..\Classes\Packet\Handler\UserLogin.h" />
     <ClInclude Include="..\Classes\Packet\Processor.h" />
     <ClInclude Include="..\Classes\SoushenScene.h" />
+    <ClInclude Include="..\Classes\SsCfg.h" />
     <ClInclude Include="..\Classes\System\Any.h" />
     <ClInclude Include="..\Classes\System\Clock.h" />
     <ClInclude Include="..\Classes\System\CsvParser.h" />

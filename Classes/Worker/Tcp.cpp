@@ -4,7 +4,7 @@
 
 namespace Worker
 {
-	Tcp tcp;
+	Tcp _tcp;
 	Tcp::Tcp():_running(false), _serverPort(0), _tcpnet(NULL)
 	{
 	}
@@ -43,10 +43,19 @@ namespace Worker
 			{
 				//do something
 				_tcpnet->runRecvMsg();
-				System::Sleep(500);
+				System::Sleep(50);
 			}
 		}
 		uninit();
 	}
+
+	 bool Tcp::sendMsg(void* pBuf, int nSize)
+	 {
+		 if (_tcpnet != NULL)
+		 {
+			return _tcpnet->sendMsg(pBuf, nSize);
+		 }
+		 return false;
+	 }
 
 }

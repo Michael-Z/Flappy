@@ -10,10 +10,9 @@ namespace Worker
  public:
 	 Tcp();
 	 virtual ~Tcp();
-
-	 bool addTimer(int, UInt32, UInt32 = 0, void * = NULL);
-	 bool delTimer(int);
 	 inline void initTcpInfo(const char *str, UInt16 port) { _serverIp = str; _serverPort = port; }
+	 virtual const char* getLogFilename() { return "Tcp"; }
+	 bool sendMsg(void* pBuf, int nSize);
  protected:
 	 virtual bool init();
 	 virtual void uninit();
@@ -25,7 +24,7 @@ namespace Worker
 	 UInt16 _serverPort;
 	 TcpNetWork::TcpNet *_tcpnet;
  };
-extern Tcp tcp;
+extern Tcp _tcp;
 
 }
 

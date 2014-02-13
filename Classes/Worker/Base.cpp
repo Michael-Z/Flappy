@@ -3,6 +3,7 @@
 
 #include "System/ThreadLocalPtr.h"
 #include "System/File.h"
+#include "../SsCfg.h"
 
 namespace Worker
 {
@@ -49,9 +50,9 @@ void SimpleBase::run()
 		_logger = new System::Logger();
 	else
 	{
-		//System::File f(ktCfg.logPath);
-		//f.createDirectories();
-		//_logger = new System::Logger((ktCfg.logPath + "/" + logFilename).c_str());
+		System::File f(sSCfg.logPath);
+		f.createDirectories();
+		_logger = new System::Logger((sSCfg.logPath + "/" + logFilename).c_str());
 	}
 	localWorker = this;
 	_running = true;
