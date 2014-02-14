@@ -48,9 +48,11 @@ bool AppDelegate::applicationDidFinishLaunching() {
 	Worker::_tcp.start();
 	
 	System::Sleep(5000);
-	Packet::LogIn ul;
+	Packet::UserLogin ul;
 	ul.SetUsername("test1@pope");
 	ul.send();
+
+	cout<<"client send"<<std::endl;
 
     return true;
 }

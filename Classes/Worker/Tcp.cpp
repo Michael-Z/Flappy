@@ -16,7 +16,7 @@ namespace Worker
 	bool Tcp::init()
 	{
 		_tcpnet = new(std::nothrow) TcpNetWork::TcpNet();
-		if (_tcpnet = NULL)
+		if (_tcpnet == NULL)
 		{
 			return false;
 		}

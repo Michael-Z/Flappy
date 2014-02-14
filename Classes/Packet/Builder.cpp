@@ -2,6 +2,7 @@
 #include "Builder.h"
 #include "../TcpNetwork/TcpNet.h"
 #include "../Worker/Tcp.h"
+#include "Handler/Handler.h"
 
 namespace Packet
 {
@@ -30,11 +31,23 @@ bool Builder::pack()
 	{
 		return false;
 	}
+	//stream.reset(s);
+	//*((UInt16*)&((*s)[4])) =  op;
+	//packContent();
+	//size_t sz = s->size() - 6;
+	//memcpy(&(*s)[0], &sz, 3);
+	
 	stream.reset(s);
-	*((UInt16*)&((*s)[4])) =  op;
+	//*((UInt16*)&((*s)[4])) =  op;
+
 	packContent();
-	size_t sz = s->size() - 6;
-	memcpy(&(*s)[0], &sz, 3);
+	size_t sz = s->size() - 20;
+	packhead.Setop(op);
+	packhead.Setlen(sz);
+	packhead.SetCliid(123);
+	packhead.SetSvrid(321);
+	packhead.PackBuffer(reinterpret_cast<uint8_t*>(&(*s)[0]) );
+
 	return true;
 }
 
