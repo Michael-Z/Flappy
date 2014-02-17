@@ -1,6 +1,7 @@
 #include "Config.h"
 #include "TcpNet.h"
 #include "../Packet/Processor.h"
+#include "../Packet/Handler/Handler.h"
 
 namespace TcpNetWork
 {
@@ -139,23 +140,30 @@ void TcpNet::runRecvMsg()
 			break;
 		}
 
-      #pragma pack(push, 1)
+#pragma pack(push, 1)
 		struct PktHdr
 		{
-			UInt32 size;
-			UInt16 op;
+			Int32 op;
+			Int32 len;
+			Int32 cllid;
+			Int32 svrid;
 		} ATTR_PACKED();
-      #pragma pack(pop)
+#pragma pack(pop)
 
 		// 保存已经接收数据的大小
 		m_nInbufLen += nRecvSize;
 
 		// 接收到的数据够不够一个包头的长度
-		while (m_nInbufLen >= 6)
+		while (m_nInbufLen >= PACKETHEADLEN)
 		{
+			UInt8 hdr[20] = {0};
 			// 读取包头
-			PktHdr* pHead = (PktHdr*) (m_InputBuff);
-			const UInt16 nPacketSize = pHead->size & 0x00FFFFFF;
+			CopyMemory(hdr, m_InputBuff, PACKETHEADLEN);
+			Packet::packhead.Unpack(hdr, 20);
+			
+			UInt16 nPacketSize = 0;
+			// 拷贝到数据缓存
+			CopyMemory(m_cbDataBuf, m_InputBuff, nPacketSize);
 
 			// 判断是否已接收到足够一个完整包的数据
 			if (m_nInbufLen < nPacketSize)

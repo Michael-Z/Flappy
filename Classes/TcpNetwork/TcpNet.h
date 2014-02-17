@@ -6,7 +6,8 @@
 //max message size
 #define MAX_MESSAGE_SIZE 5*1024      //包的最大长度
 #define IN_MAX_MESSAGE_SIZE 10*1024  //接受缓冲区大小
-#define IN_MAX_POOL_SIZE 100*1024   //暂存区大小
+#define IN_MAX_POOL_SIZE 100*1024    //暂存区大小
+#define PACKETHEADLEN 20             //包头长度
 
 namespace TcpNetWork
 {

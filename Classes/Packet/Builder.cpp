@@ -26,7 +26,7 @@ const std::string& Builder::data()
 
 bool Builder::pack()
 {
-	std::string *s = new(std::nothrow) std::string(6, 0);
+	std::string *s = new(std::nothrow) std::string(20, 0);
 	if (s == NULL)
 	{
 		return false;
