@@ -32,7 +32,7 @@ namespace Worker
 	void Tcp::uninit()
 	{
 		_running = false;
-		delete _tcpnet;
+		SAFE_DELETE(_tcpnet);
 	}
 
 	void Tcp::loop()

@@ -19,7 +19,7 @@ TcpNet::~TcpNet()
 	memset(m_InputBuff, 0, sizeof(m_InputBuff));
 	if (m_tcpsocket != NULL)
 	{
-		delete m_tcpsocket;
+		SAFE_DELETE(m_tcpsocket);
 	}
 }
 
@@ -123,7 +123,6 @@ void TcpNet::runRecvMsg()
 		return;
 	}
 	
-	int nCount = 0;
 	for (;;)
 	{
 		// 接收数据
@@ -159,9 +158,10 @@ void TcpNet::runRecvMsg()
 			UInt8 hdr[20] = {0};
 			// 读取包头
 			CopyMemory(hdr, m_InputBuff, PACKETHEADLEN);
-			Packet::packhead.Unpack(hdr, 20);
+			Packet::packhead.Unpack(hdr, PACKETHEADLEN);
 			
-			UInt16 nPacketSize = 0;
+			UInt16 nPacketSize = (Packet::packhead.Getlen() & 0x00FFFFFF) + PACKETHEADLEN;
+
 			// 拷贝到数据缓存
 			CopyMemory(m_cbDataBuf, m_InputBuff, nPacketSize);
 
@@ -186,10 +186,7 @@ void TcpNet::runRecvMsg()
 		    //pHead = (PktHdr*) (m_cbDataBuf);
 			//const UInt16 nDataSize = nPacketSize - (UInt16)sizeof(PktHdr);
 			//OnNetMessage(pHead->op, m_cbDataBuf+sizeof(PktHdr), nDataSize);
-			Packet::_processor.parseInit(m_cbDataBuf, nPacketSize, 0, 0);
-				
-
-			++nCount;
+			//Packet::_processor.parseInit(m_cbDataBuf, nPacketSize, 0, 0);
 		}
 	}
 }

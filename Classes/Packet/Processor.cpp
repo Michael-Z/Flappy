@@ -21,28 +21,23 @@ void decryptPacket(UInt32 key, UInt16& op, UInt32 size, UInt8 * buf)
 
 bool Processor::parseInit(UInt8 *evbuf, int len, UInt32 data, UInt32 addr)
 {
-	if (len < 6)
+	if (len < PACKETHEADLEN)
 	{
 		return false;
 	}
-#pragma pack (push, 1)
-	struct PktHdr
-	{
-		UInt32 size;
-		UInt16 op;
-	} ATTR_PACKED();
-#pragma pack(pop)
 
-	PktHdr hdr;
-	memcpy((char*)&hdr, evbuf, 6);
-	UInt32 sz = hdr.size & 0x00FFFFFF;
-	if(static_cast<int>(sz) + 6 > len)
+	UInt8 hdr[20] = {0};
+	memcpy((char*)&hdr, evbuf, PACKETHEADLEN);
+	Packet::packhead.Unpack(hdr, PACKETHEADLEN);
+
+	UInt32 sz = Packet::packhead.Getlen() & 0x00FFFFFF;
+	if(static_cast<int>(sz) + PACKETHEADLEN > len)
 		return false;
-	UInt32 key = hdr.size >> 24;
+	UInt32 key = Packet::packhead.Getlen() >> 24;
 	HandlerMsgInit * msg = (HandlerMsgInit *)malloc(sz + sizeof(HandlerMsgInit));
 	if(msg == NULL)
 	{
-	//	TcpNetWork::_TcpNet.drainDataBuf(sz + 6);
+		TcpNetWork::_TcpNet.drainDataBuf(sz + 6);
 		return true;
 	}
 	msg->hdr.size = sz;

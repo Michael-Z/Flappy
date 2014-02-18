@@ -37,7 +37,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // run
     //pDirector->runWithScene(pScene);
 
-	View::_gamemanager::instance()->DisplayNowScene(View::SCENE_INIT);
+	//View::_gamemanager::instance()->DisplayNowScene(View::SCENE_INIT);
 
 	//connect 
 	//TcpNetWork::_TcpNet.connect("127.0.0.1", 7770, 50);
